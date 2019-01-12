@@ -4,11 +4,11 @@ pipeline {
     tools {
         maven 'LocalMaven'
     }
-    
+
     stages{
         stage('Build'){
             steps {
-                sh 'mvn clean package'
+                cmd 'mvn clean package'
             }
             post {
                 success {
